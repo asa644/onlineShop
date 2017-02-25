@@ -30,14 +30,23 @@ class Db extends DbBlueprint {
 	* Function that connects to the database
 	**/
 	protected function connectToDB() {
-		try {
-   			$dbh = new PDO("mysql:host=localhost;dbname=onlineShop", "root", "");
-    		$dbh -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+		// try {
+  //  			$dbh = new PDO("mysql:host=localhost;dbname=onlineShop", "root", "");
+  //   		$dbh -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    		$this -> dbh = $dbh;
-		} catch(PDOException $e) {
-    		if(DEBUG_ALL) echo 'PDO Error: ' . $e->getMessage();
-		}
+  //   		$this -> dbh = $dbh;
+		// } catch(PDOException $e) {
+  //   		if(DEBUG_ALL) echo 'PDO Error: ' . $e->getMessage();
+		// }
+    $dbopts = parse_url(getenv('DATABASE_URL'));
+$app->register(new Herrera\Pdo\PdoServiceProvider(),
+               array(
+                   'pdo.dsn' => 'pgsql:dbname='.ltrim($dbopts["path"],'/').';host='.$dbopts["host"] . ';port=' . $dbopts["port"],
+                   'pdo.username' => $dbopts["user"],
+                   'pdo.password' => $dbopts["pass"]
+               )
+);
+
 	}
 
 	/**
