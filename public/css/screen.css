@@ -1,0 +1,164 @@
+html,
+body {
+  background: #eee;
+}
+
+.page-title {
+  font-family: "Oswald";
+  font-weight: bold;
+  color: #3f9ddd;
+  font-size: 60px;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 40px 0;
+}
+
+.login-register-box {
+  width: 500px;
+  margin: 0 auto;
+  border-radius: 10px;
+  padding: 50px 50px 40px 50px;
+  background: #fff;
+  margin-top: 20px;
+}
+
+.login-register-box h1 {
+  font-family: "Oswald";
+  font-weight: bold;
+  color: #666;
+  font-size: 16px;
+  margin-bottom: 20px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.login-register-box h2 {
+  font-family: "Oswald";
+  font-weight: 300;
+  color: #ff0000;
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.login-register-box input[type=text],
+.login-register-box input[type=password] {
+  width: 100%;
+  background: #efefef;
+  height: 30px;
+  text-indent: 5px;
+  border: 0;
+  margin-bottom: 10px;
+}
+
+.login-register-box input[type=submit] {
+  background: #3f9ddd;
+  border: 0;
+  color: #FFF;
+  font-family: "Oswald";
+  font-weight: 300;
+  text-align: center;
+  padding: 10px 30px;
+}
+
+.menu {
+  background: #3f9ddd;
+  height: 50px;
+  width: 100%;
+}
+
+.menu ul {
+  width: 100%;
+}
+
+.menu li {
+  display: inline-block;
+}
+
+.menu li.logout {
+  float: right;
+}
+
+.menu li.logout a {
+  border-left: 1px solid rgba(0, 0, 0, 0.3);
+  border-right: 0;
+}
+
+.menu li a {
+  line-height: 50px;
+  display: inline-block;
+  height: 50px;
+  padding: 0 15px;
+  text-decoration: none;
+  border-right: 1px solid rgba(0, 0, 0, 0.3);
+  font-family: "Oswald";
+  font-weight: 400;
+  color: #FFF;
+}
+
+.menu li a:hover {
+  opacity: .5;
+}
+
+.recent-products {
+  width: 70%;
+  margin: 0 auto;
+  padding-top: 80px;
+}
+
+.recent-products h1 {
+  font-family: "Oswald";
+  color: #3f9ddd;
+  border-bottom: 1px solid #3f9ddd;
+  padding-bottom: 10px;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+.product-square {
+  width: 23%;
+  margin-right: 2.6%;
+  float: left;
+  margin-bottom: 80px;
+}
+
+.product-square:nth-child(4n) {
+  margin-right: 0;
+}
+
+.product-square img {
+  width: 100%;
+}
+
+.product-square .add-to-cart,
+.product-square .remove-from-cart {
+  background: #3f9ddd;
+  display: table;
+  margin-top: 10px;
+  text-decoration: none;
+  padding: 10px 15px;
+  font-family: "Oswald";
+  color: #FFF;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.product-square .add-to-cart:hover,
+.product-square .remove-from-cart:hover {
+  opacity: .7;
+}
+
+.product-square h2 {
+  font-family: "Oswald";
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #333;
+  margin-top: 10px;
+}
+
+.product-square h3 {
+  font-size: 12px;
+  font-weight: bold;
+  color: #3f9ddd;
+  font-family: "Oswald";
+  margin-top: 10px;
+}
